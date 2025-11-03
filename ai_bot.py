@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 def init_agent_service():
     """初始化具备 Elasticsearch RAG 和网络搜索能力的助手服务"""
     
-    # ... (省略与 ai_bot-8.py 相同的代码) ...
+ 
     # 步骤 1: LLM 配置
     llm_cfg = {
         'model': 'qwen-max',
@@ -177,7 +177,7 @@ def main():
                         textbox = gr.Textbox(container=False, show_label=False, placeholder="输入你的问题...", scale=10)
                         submit_btn = gr.Button("↑", scale=1, min_width=0, variant="primary")
         
-        # ... (省略与 ai_bot-8.py 相同的交互逻辑代码) ...
+        
         def on_submit(query, history):
             history.append([query, None])
             return "", history
